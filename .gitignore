@@ -12,3 +12,8 @@ main.lot
 *.aux
 *.lof
 *.log
+*.bbl
+*.blg
+*.fls   
+*.fdb_latexmk
+*.synctex.gz
