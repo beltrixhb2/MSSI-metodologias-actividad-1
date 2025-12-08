@@ -1,0 +1,50 @@
+\documentclass{formato/UNIR}
+
+%--- Parametros de entrada ---%
+\titulo{Actividad 1: Definición de una metodología basada en Scrum}
+\autor{Grupo 90 (nombre , nombre 2, nombre 3, nombre 4, nombre 5)}
+\master{Máster en Ingeniería del Software y Sistemas Informáticos}
+\asignatura{Metodologías, Desarrollo y Calidad en la Ingeniería de Software}
+
+\keywords{Palabra clave 1, Palabra clave 2, Palabra Clave N} %Keywords en ingles
+\keywordsEs{Palabra clave 1, Palabra clave 2, Palabra Clave N} %Palabras clave en español
+
+
+%--- Archivo de configuracion global ---%
+\input{formato/conf}
+
+%---  Compilacion rapida ---%
+% Para ahorrar tiempo de compilacion, comentar las secciones que no se quieran compilar
+% Carácter % en frente de la sección.
+\includeonly{
+  contenido/TFM-00_Abstract,
+  contenido/Capitulo_01,
+  contenido/TFM-10_Bibliografia,
+}
+
+%---------------------------------------------%
+%           Inicio del documento
+%---------------------------------------------%
+\begin{document}
+    %--- Paginas iniciales: portada,abstract,índice,lista de figuras y lista de tablas ---%. 
+    \frontmatter
+    \pagestyle{frontmatter}
+        \maketitle          % Portada
+        \tableofcontents    % Índice
+        \clearpage
+        \include{contenido/TFM-00_Abstract}  %Abtract
+        \listoffigures      % Índice de imagenes
+        \listoftables       % Índice de tablas
+    
+    %---    Cuerpo ---% 
+    \mainmatter
+    \pagestyle{mainmatter}
+        %Incluir aqui todos los capitulos (carpeta contenido)
+        \include{contenido/Capitulo_01}
+
+    %--- Apéndices y bibliografia ---%
+    \include{contenido/TFM-10_Bibliografia}
+    \begin{appendices}
+        %Incluir aqui todos los apendices (carpeta contenido).
+    \end{appendices}
+\end{document}

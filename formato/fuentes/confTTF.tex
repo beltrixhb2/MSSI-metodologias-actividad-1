@@ -1,0 +1,32 @@
+% Configuración de fuentes TrueType (para XeLaTeX o LuaLaTeX)
+\RequirePackage{fontspec}
+
+% Usar fuentes estándar de LaTeX si las del sistema no están disponibles
+\IfFontExistsTF{Georgia}{
+    \setmainfont{Georgia}
+    \newfontfamily\georgiab{Georgia}[BoldFont={Georgia Bold}]
+    \newfontfamily\georgiamd{Georgia}
+}{
+    \setmainfont{TeX Gyre Pagella} % Alternativa libre
+    \newcommand{\georgiab}{\bfseries}
+    \newcommand{\georgiamd}{\mdseries}
+}
+
+\IfFontExistsTF{Arial}{
+    \setsansfont{Arial}
+}{
+    \setsansfont{TeX Gyre Heros} % Alternativa a Arial
+}
+
+\IfFontExistsTF{Courier New}{
+    \setmonofont{Courier New}
+}{
+    \setmonofont{TeX Gyre Cursor} % Alternativa a Courier
+}
+
+\IfFontExistsTF{Cambria}{
+    \newfontfamily\cambriamd{Cambria}
+}{
+    \newcommand{\cambriamd}{\rmfamily}
+}
+

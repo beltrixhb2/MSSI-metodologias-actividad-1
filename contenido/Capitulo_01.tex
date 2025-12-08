@@ -1,0 +1,155 @@
+\chapter{Eventos, Prácticas de Colaboración y Calendario}
+\section{Calendario y Cronograma de Sprints}
+
+Para garantizar un ritmo sostenible y predecible, se establece una cadencia fija de 2 semanas por Sprint. 
+
+Se ha diseñado un ciclo operativo de \textbf{Miércoles a Martes}. Esta estrategia busca evitar los cierres de sprint en viernes, evitando el riesgo de realizar despliegues o actualizaciones críticas justo antes del fin de semana, cuando la capacidad de reacción es menor.
+
+\paragraph{Horarios y Rutinas:}
+La jornada laboral del equipo es de 9:00 a 18:00 (con pausa para comer). Se ha establecido la política de realizar los eventos síncronos (Dailys, Planning y Review) a primera hora (09:15 AM).
+
+\paragraph{Justificación:}
+Esta decisión busca asegurar la puntualidad del equipo al inicio de la jornada y liberar el resto del día de interrupciones. Al concentrar la gestión a primera hora, se protegen bloques largos de tiempo de desarrollo ininterrumpido incentivando la productividad de los programadores.
+
+\subsection*{Innovación y Mejora Continua (Hack Time)}
+Inspirados en la cultura de Spotify [Método Spotify], se reserva la tarde de los martes de cierre de Sprint (después de la Retrospective, de 12:15 a 18:00) como un espacio flexible:
+
+\begin{itemize}
+    \item \textbf{Prioridad 1 - Estabilización:} Si surgieron incidencias críticas tras la Sprint Review, este tiempo se dedica obligatoriamente a \textit{hotfixes} para asegurar la estabilidad de la entrega antes del despliegue.
+    \item \textbf{Prioridad 2 - Pago de Deuda Técnica:} Si la entrega es estable pero durante el Sprint se tomaron "atajos técnicos" conscientes para llegar a la fecha (código complejo, falta de comentarios, tests pendientes de refactorizar), este tiempo se invierte en sanear el código. \textbf{Regla de oro:} No se inicia la innovación si el código base está "sucio" o es difícil de mantener.
+    \item \textbf{Prioridad 3 - Innovación:} Si la entrega fue exitosa y el código está saneado, el equipo dedica este tiempo a investigar nuevas ideas, probar nuevas librerías, realizar formación interna o compartir conocimientos. Esto incentiva al equipo a entregar código de calidad durante el sprint para poder liberar su tiempo de investigación, además de fomentar la motivación, reducir el \textit{burnout} y mantener al equipo actualizado tecnológicamente.
+\end{itemize}
+
+\paragraph{Code Freeze (Jueves S2):}
+Se recomienda cerrar el código el jueves para dedicar el viernes y lunes de la semana 2 y 3 a pruebas finales de integración y preparación del entorno de demostración.
+
+\bigskip
+\noindent \textbf{Visualización del Sprint Tipo:}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{|p{1.5cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|}
+\hline
+\textbf{Semana} & \textbf{Lunes} & \textbf{Martes} & \textbf{Miércoles} & \textbf{Jueves} & \textbf{Viernes} \\ \hline
+\textbf{Semana 1} & (Sprint anterior) & (Sprint anterior) & \textbf{INICIO SPRINT} \newline \newline Sprint Planning \newline (9:15 - 13:15) & Daily \newline (9:15) \newline \newline Desarrollo & Daily \newline (9:15) \newline \newline Desarrollo \\ \hline
+\textbf{Semana 2} & Daily \newline (9:15) \newline \newline Desarrollo & Daily \newline (9:15) \newline \newline Desarrollo & Daily \newline (9:15) \newline \newline Desarrollo & Daily \newline (9:15) \newline \newline \textbf{Code Freeze} & Daily \newline (9:15) \newline \newline Desarrollo \\ \hline
+\textbf{Semana 3} & Daily \newline (9:15) \newline \newline QA / Demo & \textbf{CIERRE SPRINT} \newline \newline Review \newline Retro \newline Hack Time & \textbf{INICIO SIGUIENTE} & (Siguiente Sprint) & (Siguiente Sprint) \\ \hline
+\end{tabular}
+\caption{Simulación del Sprint Tipo}
+\end{table}
+
+\section{Estrategia de Desarrollo, Infraestructura y Despliegue}
+Para asegurar un flujo de trabajo ordenado, automatizado y predecible, se define la siguiente arquitectura técnica y política de entregas basada en \textbf{GitHub Flow}.
+
+\subsection{Gestión de Ramas y Entornos}
+\begin{itemize}
+    \item \textbf{Rama \texttt{main} (Staging / Pre-producción):} Es la rama de integración continua. Todo código aquí ha pasado revisión y pruebas.
+    \begin{itemize}
+        \item \textit{Entorno Asociado:} \textbf{Staging}. Es un espejo de producción utilizado para QA y validación del Product Owner.
+    \end{itemize}
+    
+    \item \textbf{Rama \texttt{prod} (Producción):} Contiene exclusivamente el código estable y aprobado para los usuarios finales.
+    \begin{itemize}
+        \item \textit{Entorno Asociado:} \textbf{Producción}. El entorno vivo de la librería.
+    \end{itemize}
+    
+    \item \textbf{Ramas \texttt{feat/*}, \texttt{fix/*} y \texttt{refactor/*}:} Ramas temporales de vida corta para desarrollo. Se eliminan tras integrarse en \texttt{main}.
+\end{itemize}
+
+\subsection{Pipeline de CI/CD y Política de Entregas}
+La automatización se gestiona mediante \textbf{GitHub Actions}, integrando las reglas de negocio con la ejecución técnica:
+
+\begin{enumerate}
+    \item \textbf{Integración Continua (CI) - Al abrir Pull Request}
+    \begin{itemize}
+        \item \textbf{Disparador:} Creación de una PR hacia \texttt{main}.
+        \item \textbf{Acciones Automáticas:}
+        \begin{itemize}
+            \item Instalación de dependencias.
+            \item \textbf{Linter:} Revisión automática de estilo de código.
+            \item \textbf{Tests:} Ejecución de pruebas unitarias (mínimo 80\% cobertura requerida).
+        \end{itemize}
+        \item \textbf{Política:} Si algún paso falla, se bloquea el merge. El código no puede integrarse hasta que esté "verde".
+    \end{itemize}
+
+    \item \textbf{Despliegue Continuo a Staging - Al hacer Merge}
+    \begin{itemize}
+        \item \textbf{Disparador:} Aprobación de la PR y fusión (merge) en \texttt{main}.
+        \item \textbf{Acciones Automáticas:} Build de la aplicación y despliegue inmediato al entorno de \textbf{Staging}.
+        \item \textbf{Política:} Cada Historia de Usuario terminada debe estar disponible en Staging lo antes posible para su validación por QA/PO durante el Sprint.
+    \end{itemize}
+
+    \item \textbf{Entrega a Producción - Cierre de Sprint}
+    \begin{itemize}
+        \item \textbf{Disparador:} Aprobación del incremento en la Sprint Review (Martes) y coincidencia con plan de Release.
+        \item \textbf{Acciones:} Creación de Pull Request de \texttt{main} hacia \texttt{prod}.
+        \item \textbf{Política de Ventana de Mantenimiento:} Aunque el código esté listo el martes tras la Review, el despliegue a Producción se programa para el \textbf{miércoles por la mañana}. Esto asegura disponibilidad del equipo técnico para monitorizar el despliegue y evita incidencias a última hora del día.
+    \end{itemize}
+\end{enumerate}
+
+\section{Definition of Done (DoD)}
+Para garantizar la calidad técnica y evitar deuda técnica, el equipo acuerda que ninguna Historia de Usuario se considerará terminada a menos que cumpla estrictamente con la siguiente lista de verificación:
+
+\textbf{Checklist:}
+\begin{itemize}
+    \item \textbf{Código:} El código ha sido subido al repositorio, sigue los estándares de estilo, ha pasado una revisión (Code Review) mediante una Pull Request aprobada y está correctamente mergeado en la rama \texttt{main}.
+    \item \textbf{Entorno:} La funcionalidad está desplegada y validada en el entorno de \textbf{Staging}.
+    \item \textbf{Pruebas:} Se han superado los tests unitarios (ejecutados por GitHub Actions) con una cobertura superior al 80\%, y las pruebas de integración básicas.
+    \item \textbf{Criterios de Aceptación:} Se cumplen todos los requisitos específicos detallados en la Historia de Usuario y todas las tareas técnicas asociadas han sido cerradas.
+    \item \textbf{Accesibilidad:} Los elementos de interfaz cuentan con etiquetas ARIA, son navegables por teclado y están traducidos a los idiomas seleccionados.
+    \item \textbf{No Bugs:} No existen errores críticos o de funcionalidad conocidos asociados a la tarea.
+    \item \textbf{RNF:} Se ha validado el cumplimiento de los requisitos no funcionales.
+    \item \textbf{Documentación:} La documentación técnica ha sido actualizada reflejando los cambios.
+\end{itemize}
+
+% Aquí iría la imagen de la captura
+\begin{center}
+    \fbox{\parbox{10cm}{\centering \vspace{1cm} [TODO: INSERTAR CAPTURA JIRA HU] \vspace{1cm}}}
+\end{center}
+
+\section{Prácticas de Colaboración y Gestión de Impedimentos}
+Para mantener la fluidez del trabajo, se establecen los siguientes mecanismos de comunicación:
+
+\subsection*{Gestión Visual del Trabajo}
+Utilizaremos un tablero digital Jira con las siguientes columnas para visualizar el flujo de valor:
+\begin{center}
+    \texttt{Backlog $\rightarrow$ Sprint Backlog $\rightarrow$ In Progress $\rightarrow$ Code Review $\rightarrow$ Testing/QA $\rightarrow$ DONE}
+\end{center}
+
+% Aquí iría la imagen de la captura de listas
+\begin{center}
+    \fbox{\parbox{10cm}{\centering \vspace{1cm} [TODO: INSERTAR CAPTURA JIRA LISTAS] \vspace{1cm}}}
+\end{center}
+
+\subsection*{Canales de Comunicación}
+\begin{itemize}
+    \item \textbf{Síncrona:} Se utilizará un canal de chat en Teams con canales temáticos y mensajes directos.
+    \item \textbf{Regla:} Si una duda técnica requiere más de 5 mensajes de chat, se hace una videollamada rápida. Todas las videollamadas y reuniones se realizarán a través de la herramienta Microsoft Teams y serán grabadas para poder revisar la conversación.
+    \item \textbf{Asíncrona:} Las decisiones técnicas y funcionales quedarán registradas en los comentarios de la tarjeta de la tarea Jira para evitar pérdida de información.
+\end{itemize}
+
+\subsection*{Protocolo de Gestión de Impedimentos}
+Un impedimento es cualquier factor que bloquee el progreso.
+
+\begin{itemize}
+    \item \textbf{Detección:} Se mueve la HU al listado \texttt{Blocked} en el tablero digital inmediatamente.
+    \item \textbf{Acción:} Es responsabilidad del Scrum Master eliminar el bloqueo. Si no puede resolverlo directamente, debe encontrar a la persona adecuada en la organización para hacerlo.
+    \item \textbf{Seguimiento:} Si el impedimento pone en riesgo el Objetivo del Sprint, se comunica al Product Owner para gestionar expectativas.
+\end{itemize}
+
+\section{Gestión de Cambios durante el Sprint}
+Aunque Scrum requiere estabilidad para garantizar el foco del equipo, el proyecto debe mantener flexibilidad ante las necesidades cambiantes del mercado. Para gestionar esta tensión, se distinguen el siguiente protocolo de actuación:
+
+\textbf{Cambios funcionales solicitados por el negocio:}
+Cualquier solicitud de cambio en los requisitos (nuevas funcionalidades o modificaciones de las existentes) debe seguir este flujo:
+
+\begin{enumerate}
+    \item \textbf{Registro:} Las solicitudes se canalizan a través del Product Owner.
+    \item \textbf{Evaluación de Impacto:}
+    \begin{itemize}
+        \item \textbf{Bajo Impacto / No Urgente:} Se documenta como Historia de Usuario en el Product Backlog para ser priorizada en futuros Sprints.
+        \item \textbf{Alto Impacto / Urgencia Crítica:} Si el cambio es vital y no puede esperar, se aplica la \textit{regla del intercambio}: El Product Owner debe retirar del Sprint Backlog actual una o varias tareas de esfuerzo equivalente que aún no hayan comenzado (estado To Do).
+    \end{itemize}
+    \item \textbf{Aprendizaje:} Si un cambio invalida trabajo ya completado, se trata como un "desperdicio" y se analiza en la Sprint Retrospective para mejorar la toma de requisitos futura.
+\end{enumerate}
