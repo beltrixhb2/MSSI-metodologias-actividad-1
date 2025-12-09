@@ -1,33 +1,308 @@
-\chapter{Eventos, Prácticas de Colaboración y Calendario}
-\section{Calendario y Cronograma de Sprints}
+\chapter{Roles y Responsabilidades}
 
-Para garantizar un ritmo sostenible y predecible, se establece una cadencia fija de 2 semanas por Sprint. 
+En la metodología \textit{Scrum} aplicada al proyecto \textit{“Relatos de Papel”}, se definen tres roles principales: \textbf{Scrum Master}, \textbf{Product Owner} y \textbf{Equipo de Desarrollo} (\textit{Dev Team}). 
+Estos roles, alineados con los pilares de transparencia, inspección y adaptación, promueven valores ágiles como compromiso, coraje, focalización, apertura y respeto, fomentando equipos autoorganizados y multifuncionales.
 
-Se ha diseñado un ciclo operativo de \textbf{Miércoles a Martes}. Esta estrategia busca evitar los cierres de sprint en viernes, evitando el riesgo de realizar despliegues o actualizaciones críticas justo antes del fin de semana, cuando la capacidad de reacción es menor.
+\section{Scrum Master}
+El \textbf{Scrum Master} actúa como facilitador y \textit{coach} del equipo \textit{Scrum}, sin asumir funciones de jefe de proyecto. 
+Protege al equipo de interferencias externas, elimina impedimentos, organiza eventos como \textit{Daily Scrum} y \textit{Sprint Retrospective}, y asegura el cumplimiento de prácticas \textit{Scrum}. 
+Ayuda en la autogestión del equipo, resuelve conflictos y lidera la mejora continua del proceso. 
 
-\paragraph{Horarios y Rutinas:}
-La jornada laboral del equipo es de 9:00 a 18:00 (con pausa para comer). Se ha establecido la política de realizar los eventos síncronos (Dailys, Planning y Review) a primera hora (09:15 AM).
+En el contexto de \textit{“Relatos de Papel”}, gestiona obstáculos como dependencias técnicas en el desarrollo de funcionalidades de gestión de relatos, promoviendo la adopción efectiva de \textit{Scrum} en la organización.
 
-\paragraph{Justificación:}
-Esta decisión busca asegurar la puntualidad del equipo al inicio de la jornada y liberar el resto del día de interrupciones. Al concentrar la gestión a primera hora, se protegen bloques largos de tiempo de desarrollo ininterrumpido incentivando la productividad de los programadores.
+\section{Product Owner}
+El \textbf{Product Owner} maximiza el valor del producto gestionando el \textit{Product Backlog}. 
+Determina y prioriza historias de usuario según necesidades de \textit{stakeholders} (usuario final y administrador), define criterios de aceptación claros y aprueba o rechaza los incrementos entregados al final de cada \textit{sprint}. 
+Representa la visión del cliente, evaluando el retorno de inversión para priorizar \textit{features} críticas como la gestión de relatos y usuarios en \textit{“Relatos de Papel”}.
 
-\subsection*{Innovación y Mejora Continua (Hack Time)}
-Inspirados en la cultura de Spotify [Método Spotify], se reserva la tarde de los martes de cierre de Sprint (después de la Retrospective, de 12:15 a 18:00) como un espacio flexible:
+\section{Dev Team (Equipo de Desarrollo)}
+El \textbf{Dev Team} consta de tres miembros multidisciplinarios (desarrolladores \textit{frontend/backend}, UX y \textit{testers}), autoorganizados y multifuncionales. 
+Estiman el esfuerzo de tareas mediante técnicas como \textit{Planning Poker}, descomponen historias de usuario en unidades de trabajo de máximo 16 horas, y entregan incrementos potencialmente desplegables cubriendo todas las fases: análisis, desarrollo, pruebas e integración. 
+
+Como el equipo está distribuido geográficamente en distintos puntos, se realizan reuniones por Microsoft Teams para el \textit{Daily Scrum}, se usan herramientas colaborativas como GitHub (control de versiones) y se ejecuta el desarrollo en ciclos cortos (\textit{sprints}), entregando incrementos funcionales con énfasis en estándares de calidad (pruebas continuas, código limpio) y autonomía (autoorganización).
+
+\section{Interacción entre Roles}
+Los roles interactúan diariamente a través de los eventos \textit{Scrum}, clasificados en \textit{“Pigs”} (\textbf{Product Owner}, \textbf{Scrum Master} y \textbf{Dev Team}, comprometidos directamente con el éxito del proyecto) y \textit{“Chickens”} (\textit{stakeholders} externos como clientes, informados, pero no involucrados operativamente). 
 
 \begin{itemize}
-    \item \textbf{Prioridad 1 - Estabilización:} Si surgieron incidencias críticas tras la Sprint Review, este tiempo se dedica obligatoriamente a \textit{hotfixes} para asegurar la estabilidad de la entrega antes del despliegue.
-    \item \textbf{Prioridad 2 - Pago de Deuda Técnica:} Si la entrega es estable pero durante el Sprint se tomaron "atajos técnicos" conscientes para llegar a la fecha (código complejo, falta de comentarios, tests pendientes de refactorizar), este tiempo se invierte en sanear el código. \textbf{Regla de oro:} No se inicia la innovación si el código base está "sucio" o es difícil de mantener.
-    \item \textbf{Prioridad 3 - Innovación:} Si la entrega fue exitosa y el código está saneado, el equipo dedica este tiempo a investigar nuevas ideas, probar nuevas librerías, realizar formación interna o compartir conocimientos. Esto incentiva al equipo a entregar código de calidad durante el sprint para poder liberar su tiempo de investigación, además de fomentar la motivación, reducir el \textit{burnout} y mantener al equipo actualizado tecnológicamente.
+    \item En el evento \textbf{Sprint Planning}, el \textit{Product Owner} clarifica requerimientos mientras el \textit{Dev Team} estima y selecciona ítems.
+    \item Durante la \textbf{Daily Scrum} (15 minutos diarios, coordinado por \textit{Scrum Master}), el equipo reporta avances y bloqueos.
+    \item En la \textbf{Sprint Review}, se demuestra el incremento al cliente para recibir \textit{feedback} de calidad.
+    \item Y en la \textbf{Retrospective}, se analizan mejoras procesales. 
+\end{itemize}
+Este flujo iterativo con retroalimentación constante asegura adaptabilidad y alineación continua con los objetivos de negocio.
+
+\chapter{Artefactos clave de Scrum: Product Backlog y Sprint Backlogs}
+
+\section{Product Backlog}
+En nuestra metodología basada en \textit{SCRUM}, el \textbf{Product Backlog} se establecerá como el principal componente de gestión del proyecto \textit{Relatos de papel} y el repositorio central donde se mantienen las historias de usuario y funcionalidades que debe cumplir el sistema. Se definirá como una lista priorizada, detallada y estimada de historias de usuario expresadas en un lenguaje comprensible para el cliente, lo que garantizará que todos los \textit{stakeholders} compartan una visión única del producto durante todo el desarrollo.
+
+Este \textit{Product Backlog} constituye la fuente autorizada de trabajo para el equipo, asegurando que se concentre en los elementos de mayor valor y alineados con los objetivos del negocio. Será dinámico, de modo que el responsable del \textit{Product Backlog}, el \textbf{Product Owner}, será quien realice su valoración, ajuste las prioridades y lo mantenga actualizado según las necesidades y prioridades del proyecto.
+
+\subsection{Definición de Historias de Usuario}
+Una vez determinados los requisitos funcionales que debe implementar el sistema, estos se plasmarán en las historias de usuario que formarán parte del \textit{Product Backlog}. Estas historias de usuario se definirán como descripciones breves, simples y comprensibles desde la perspectiva del usuario final. Estas historias se centran en sus necesidades y en aportar valor de manera incremental e independiente, detallando qué desea lograr y por qué. Con ello se garantiza que cada funcionalidad contribuya a resolver un problema real y proporcione al equipo el contexto y la claridad necesarios para su correcta implementación.
+
+La información relativa a las especificaciones técnicas necesarias para el desarrollo de las funcionalidades, así como los requisitos no funcionales, no se definirán dentro de las historias de usuario. En su lugar, se documentarán por separado en artefactos adicionales que quedarán vinculados a dichas historias.
+
+Cada historia de usuario se definirá en primera instancia siguiendo la siguiente estructura:
+\begin{itemize}
+    \item \textbf{Como [Rol]:} Indica quién es el usuario o beneficiario de la funcionalidad.
+    \item \textbf{Quiero [Funcionalidad]:} Describe la característica o acción que el usuario desea.
+    \item \textbf{Para [Beneficio]:} Explica el objetivo o beneficio que el usuario espera obtener. 
+\end{itemize}
+Desde el prisma del proyecto \textit{Relatos de papel}, se establecerán dos roles principales: el \textbf{usuario final} y el \textbf{usuario administrador}.
+
+A continuación, se ejemplifica la definición de historias de usuario del proyecto:
+\begin{quote}
+    \textbf{EJEMPLO DE CÓMO QUEDARÍA LA HISTORIA DE USUARIO PARA CLIENTE Y ADMIN}
+\end{quote}
+
+Además de describir una funcionalidad mediante la estructura establecida, las historias de usuario se desarrollarán de forma incremental a través de:
+\begin{itemize}
+    \item Las conversaciones entre los distintos \textit{stakeholders} durante la planificación y la iteración, que permiten aclarar y estabilizar los detalles.
+    \item Las pruebas definidas para confirmar su correcta implementación y verificar su finalización satisfactoria.
 \end{itemize}
 
-\paragraph{Code Freeze (Jueves S2):}
-Se recomienda cerrar el código el jueves para dedicar el viernes y lunes de la semana 2 y 3 a pruebas finales de integración y preparación del entorno de demostración.
+Para garantizar que las historias de usuario sean claras, manejables y enfocadas a entregar valor, se empleará la técnica \textbf{INVEST}. Esta técnica asegurará la calidad de cada historia de usuario mediante el cumplimiento de seis criterios esenciales:
+\begin{itemize}
+    \item \textbf{Independiente (Independent).} Las historias de usuario deben ser autocontenidas y no depender de otras para completarse.
+    \item \textbf{Negociable (Negotiable).} Las historias no deben ser rígidas, sino puntos de partida para la discusión y refinamiento continuo.
+    \item \textbf{Valiosa (Valuable).} Cada historia debe aportar valor tangible al usuario o al negocio.
+    \item \textbf{Estimable (Estimable).} Las historias deben ser lo suficientemente claras y detalladas para que el equipo pueda estimar el esfuerzo requerido.
+    \item \textbf{Pequeña (Small).} Su alcance debe permitir que se completen dentro de un único \textit{sprint}. 
+    \item \textbf{Verificable (Testable).} Las historias deben incluir criterios de aceptación claros que permitan determinar objetivamente si la historia está completa y cumple lo esperado.
+\end{itemize}
 
-\bigskip
-\noindent \textbf{Visualización del Sprint Tipo:}
+El formato de cada historia de usuario incluida en el \textit{Product Backlog} estará definido por los siguientes campos:
+\begin{itemize}
+    \item \textbf{Identificador.} Código único e inequívoco que permita rastrear la historia a lo largo de su evolución dentro del \textit{Product Backlog}.
+    \item \textbf{Nombre o descripción breve.} Descripción clara y concisa que indique la funcionalidad que representa la historia desde la perspectiva del usuario siguiendo la estructura previamente descrita.
+    \item \textbf{Estimación inicial.} Representación, mediante puntos de historia, de una aproximación del esfuerzo requerido para su implementación. Esta estimación es realizada por el equipo de desarrollo en función del tamaño y complejidad de la historia utilizando técnicas de estimación relativas.
+    \item \textbf{Valor.} Evaluación del beneficio que la historia aporta al usuario o al negocio, con el objetivo de maximizar el valor y la satisfacción.
+    \item \textbf{Prioridad.} Orden definido por el \textit{Product Owner} durante la gestión del \textit{Product Backlog} y que determina el orden de implementación: las historias de mayor prioridad se incluirán primero en el \textit{Product Backlog}.
+    \item \textbf{Criterios de aceptación.} Descripción de alto nivel de cómo se validará la historia de usuario. Estos criterios permiten determinar si cumple la \textit{Definition of Done} y son la base para las pruebas de aceptación.
+    \item \textbf{Notas.} Información adicional relevante (comentarios, aclaraciones, decisiones tomadas o referencias externas) que facilite la comprensión y el refinamiento de la historia. El nivel de detalle dependerá de su prioridad: las historias de mayor prioridad estarán más refinadas y detalladas.
+\end{itemize}
+
+En la Figura 1 se incluye un ejemplo de la definición de una historia de usuario del \textit{Product Backlog} del proyecto \textit{Relatos de papel}.
+
+\begin{figure}[h]
+    \centering
+    % \includegraphics[width=\textwidth]{figura1.png}
+    \caption{Historia de usuario definida en el \textit{Product Backlog} del proyecto \textit{Relatos de papel} y que recoge una de las funcionalidades que debe implementar el sistema.}
+\end{figure}
+
+\subsection{Estimación de las Historias de Usuario}
+El esfuerzo de las historias de usuario del \textit{Product Backlog} se estimará mediante \textbf{puntos de historia}, una medida relativa del tamaño de cada funcionalidad que tiene en cuenta factores como el riesgo, la complejidad y la incertidumbre. Esta estimación permite conocer el alcance del trabajo, apoyar la priorización y facilitar la planificación del producto.
+
+La asignación de puntos se basará en la \textbf{secuencia de Fibonacci}, lo que ayuda al equipo a centrarse en el tamaño relativo de las historias. Así, una historia estimada con más puntos implicará un esfuerzo proporcionalmente mayor que otra con un valor inferior.
+
+Como referencia inicial, el equipo utilizará una \textbf{matriz de puntos de historia} (Figura 2), una adaptación de la secuencia de Fibonacci que ofrece pautas más claras sobre cómo clasificar las tareas según su esfuerzo, complejidad y riesgo. Esta matriz evolucionará con la experiencia del equipo a lo largo de los \textit{sprints}.
+
+\begin{figure}[h]
+    \centering
+    % \includegraphics[width=\textwidth]{figura2.png}
+    \caption{Ejemplo de matriz de puntos de historia de usuario de referencia.}
+\end{figure}
+
+La estimación de puntos se realizará mediante la técnica \textbf{Planning Poker} (Figura 3), que evita sesgos y favorece el consenso. Cada miembro del equipo seleccionará de forma individual una carta con un valor de Fibonacci, se revelarán las elecciones ante el resto del equipo, se discutirán las discrepancias y se repetirán las rondas hasta alcanzar un acuerdo. Este método fomenta el debate, identifica riesgos y promueve una comprensión compartida del trabajo, obteniendo estimaciones rápidas, colaborativas y suficientemente precisas para planificar.
+
+\begin{figure}[h]
+    \centering
+    % \includegraphics[width=\textwidth]{figura3.png}
+    \caption{Etapas de la técnica de estimación planning poker.}
+\end{figure}
+
+\subsection{Priorización del Product Backlog}
+El \textit{Product Backlog} se priorizará para garantizar que el equipo se concentre en los elementos más críticos, ofreciendo valor al cliente con rapidez y optimizando el uso de los recursos. La priorización permite identificar qué funcionalidades aportan mayor y menor impacto, considerando las necesidades del usuario, los objetivos del negocio y la viabilidad técnica.
+
+El \textbf{Product Owner}, con el apoyo del \textbf{Scrum Master}, liderará este proceso de priorización, integrando el valor para el negocio y las aportaciones de las partes interesadas. El equipo de desarrollo aportará información sobre complejidad, esfuerzo, dependencias y viabilidad mediante las estimaciones previamente descritas, contribuyendo a establecer prioridades realistas.
+
+Para complementar la priorización se empleará la técnica \textbf{MoSCoW}, que clasifica las historias en cuatro niveles según su nivel de importancia:
+\begin{itemize}
+    \item \textbf{Must have (Debe tener):} Funciones críticas esenciales para que el producto funcione correctamente y se considere exitoso.
+    \item \textbf{Should have (Debería tener):} Funciones importantes que pueden mejorar el producto y deberían incluirse en la solución si resulta posible, pero no son esenciales para su éxito.
+    \item \textbf{Could have (Podría tener):} Funciones deseables pero que no son urgentes e incluso podrían ser eliminadas. Se deben implementar solo si el tiempo y los recursos lo permiten.
+    \item \textbf{Won’t have (this time) (No tendrá, por ahora):} Funciones que no se consideran necesarias en este momento, aunque pueden reservarse para futuras versiones del producto.
+\end{itemize}
+Esta clasificación asegurará que los elementos más valiosos y estratégicos se implementen primero, mientras que los menos prioritarios podrán posponerse sin afectar los objetivos del proyecto.
+
+\subsection{Mapas de Historias de Usuario}
+Para complementar el \textit{Product Backlog} y ayudar a su organización y priorización se construirá un \textbf{mapa de historias de usuario}, construyéndose un mapa para cada uno de los roles definidos en \textit{Relatos de papel}: el usuario final y el usuario administrador. 
+
+En el nivel superior del mapa se situarán las \textbf{epopeyas} (Figura 4), es decir, las historias de usuario de mayor tamaño, funcionalidad y alcance. Las epopeyas se encuentran a un mayor nivel de abstracción que las historias de usuario, con un objetivo más estratégico. Debajo de cada una de ellas, se colocarán las historias de usuario en las que se descomponen. 
+
+\begin{figure}[h]
+    \centering
+    % \includegraphics[width=\textwidth]{figura4.png}
+    \caption{Ejemplo de epopeya y las historias de usuario en las que se descompone.}
+\end{figure}
+
+Además, las epopeyas se pondrán de izquierda a derecha en función del orden en el que el usuario realice las actividades que definen en la aplicación y en la que mejor describa el sistema a implementar. A su vez, las historias de usuario que formen parte de una epopeya concreta se ordenarán de arriba hacia abajo en función de su prioridad. Esta vista de las historias de usuario jerarquizadas y priorizadas permitirán la definición de las diferentes versiones del sistema a entregar, o \textit{releases}, que se van a realizar, agrupando verticalmente aquellas historias que pertenezcan a la misma \textit{release}.
+
+En el proyecto \textit{Relatos de papel} se establecerá un mínimo de tres \textit{releases} incluyendo el \textbf{Minimum Viable Product (MVP)}, que se definirá como el conjunto mínimo esencial de historias de usuario, en base a su prioridad, para considerar que el sistema es exitoso.
+
+El mapa de historias de usuario se diseñará en primera instancia empleando un \textit{template} de Excel, y una vez establecida su estructura, se construirá mediante la herramienta \textbf{Featmap}.
+
+En la Figura 5 y la Figura 6 se recoge una previsualización de los mapas de historias de usuario que se establecerán para el usuario final y el usuario administrador del proyecto \textit{Relatos de papel}.
+
+\begin{figure}[h]
+    \centering
+    % \includegraphics[width=\textwidth]{figura5.png}
+    \caption{Mapa de historias de usuario del usuario final del proyecto Relatos de papel construido con Featmap.}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    % \includegraphics[width=\textwidth]{figura6.png}
+    \caption{Mapa de historias de usuario del usuario administrador del proyecto Relatos de papel construido con Featmap.}
+\end{figure}
+
+\subsection{Criterios de Aceptación de las Historias de Usuario}
+Para cada historia de usuario del \textit{Product Backlog} se definirán \textbf{criterios de aceptación} específicos y verificables que describan el comportamiento esperado del sistema. Estos criterios deben cumplirse para que la historia se considere completada y pueda ser aceptada por el \textit{Product Owner}.
+
+Estos criterios de aceptación permiten:
+\begin{itemize}
+    \item Aclarar el alcance de la historia de usuario.
+    \item Identificar restricciones o condiciones necesarias.
+    \item Facilitar la validación al poder transformarse fácilmente en pruebas de aceptación.
+\end{itemize}
+
+Para establecerlos se identificarán los escenarios relevantes (qué debe pasar, qué no debe pasar, y qué resultados se esperan) y se formularán empleando un lenguaje claro y libre de tecnicismos orientado al usuario final. Deben ser:
+\begin{itemize}
+    \item Medibles.
+    \item Específicos.
+    \item No ambiguos.
+    \item Independientes entre sí. 
+\end{itemize}
+
+Para formalizarlos se utilizará la técnica \textbf{Gherkin/BDD} (\textit{Behavior-Driven Development}), empleando el formato \textbf{Given – When – Then} (Dado – Cuando – Entonces), que permite describir el comportamiento del sistema de manera estructurada y comprobable.
+
+Un criterio de aceptación para una de las historias de usuario de \textit{Relatos de papel} podría expresarse del siguiente modo:
+\begin{quote}
+    \textbf{INCLUIR EJEMPLO DE CRITERIO DE ACEPTACIÓN PARA EL EJEMPLO DE HISTORIA DE USUARIO EN APARTADOS ANTERIORES}
+\end{quote}
+
+\subsection{Evolución y Refinamiento del Product Backlog}
+El \textit{Product Backlog} es un artefacto \textbf{vivo y emergente} que evolucionará continuamente conforme avance el desarrollo. Las funcionalidades pueden cambiar, añadirse o eliminarse en respuesta a nuevas necesidades del negocio o de los usuarios, cambios en el mercado o descubrimientos técnicos. Esta adaptación constante permitirá maximizar el valor entregado en cada iteración.
+
+El \textit{Product Owner} mantendrá y actualizará el \textit{Product Backlog}, introduciendo modificaciones basadas en la visión del producto y en criterios de negocio.
+El proceso de \textbf{refinamiento del backlog} se realizará de forma periódica e incluirá:
+\begin{itemize}
+    \item Incorporación de historias de usuario nuevas.
+    \item División de historias grandes en otras más pequeñas.
+    \item Estimación el esfuerzo requerido.
+    \item Repriorización según valor y necesidades del negocio.
+    \item Eliminación elementos obsoletos o irrelevantes.
+\end{itemize}
+Este ajuste continuo asegura que el \textit{Product Backlog} se mantenga alineado con los objetivos del producto y preparado para guiar el trabajo del equipo en las siguientes iteraciones.
+
+\section{Sprint Backlog}
+Para cada \textit{sprint} se establecerá un \textbf{Sprint Backlog}, entendido como una selección de historias de usuario y la lista de tareas que el equipo se compromete a completar en dicho \textit{sprint}. Este \textit{Sprint Backlog} constituye el plan de trabajo detallado y acotado del \textit{sprint} y se define como un subconjunto estable del \textit{Product Backlog}, lo que garantiza el foco del equipo y evita cambios de alcance durante la iteración.
+
+La selección de historias de usuario se realizará durante el \textbf{Sprint Planning}, basándose en su prioridad y estimación previamente establecidas, y en la capacidad del equipo. A partir de estas estimaciones se escogerán las historias necesarias hasta alcanzar la cantidad adecuada de trabajo que el equipo pueda abordar a lo largo de la duración del \textit{sprint}.
+
+Una vez seleccionadas las historias, el equipo llevará a cabo su desglose en tareas, definiendo con claridad las acciones necesarias para implementar cada historia de usuario. Con ello quedará conformado el \textit{Sprint Backlog}, que incluirá:
+\begin{itemize}
+    \item Historias de usuario seleccionadas.
+    \item Nombre y descripción de las tareas del \textit{sprint}.
+    \item Prioridad de cada tarea en relación con las demás.
+    \item Gráfico \textit{burndown} del \textit{sprint} que representa el trabajo que queda por hacer en comparación con el tiempo que lleva completarlo.
+    \item Estimación del tiempo requerido para cada tarea.
+\end{itemize}
+El cierre del \textit{Sprint Backlog} durante la reunión de planificación marcará el inicio formal de la iteración, momento a partir del cual el equipo se comprometerá con el \textit{Product Owner} a entregar las funcionalidades acordadas y no se admitirán cambios en su implementación durante el \textit{sprint}.
+
+La creación y el almacenamiento de este \textit{Product Backlog} se realizará con la herramienta \textbf{Jira}.
+
+\chapter{Eventos, Prácticas de Colaboración y Calendario}
+
+\section{Eventos Scrum}
+
+\subsection{Alineamiento}
+Consiste en una o varias reuniones con una duración de hasta 4 horas cuyo objetivo es establecer la estimación y puntuación de todas las tareas del \textit{Product Backlog}. Estas sesiones se realizan al inicio del proyecto, basándose en las especificaciones iniciales.
+Al finalizar esta reunión, debe quedar definido un \textbf{Backlog completo y priorizado}.
+
+\subsection{Sprint Planning}
+El \textit{Sprint Planning} va a marcar el inicio de cada \textit{sprint} en \textit{Relatos de papel}, el objetivo es alinear al equipo en torno a un objetivo claro y alcanzable. En este proyecto los \textit{sprints} son de 2 semanas, por lo que la planificación se realiza cada 15 días, y tiene una duración aproximada de 2 horas. Durante la sesión se define \textbf{qué se hará y cómo se hará}.
+
+Durante esta reunión el \textit{Product Owner} expone las prioridades que hay en el \textit{Product Backlog} basadas en las necesidades de los \textit{stakeholders}, estableciendo un \textbf{objetivo de sprint}. Por ejemplo:
+\begin{quote}
+    \textit{“Implementar el catálogo de libros que se mostrará en la plataforma de Relatos de Papel para la futura compra”}
+\end{quote}
+
+El equipo de desarrollo revisa las historias de usuario definidas durante el Alineamiento para determinar cuáles pueden incluirse en el próximo \textit{sprint}. Durante este proceso:
+\begin{itemize}
+    \item Analiza cada Historia de Usuario.
+    \item La descompone en tareas o historias más pequeñas.
+    \item Refina los criterios de aceptación.
+    \item Detecta dependencias y riesgos.
+\end{itemize}
+El resultado es el conjunto de tareas seleccionadas que formarán parte del \textit{Sprint Backlog}.
+
+\subsection{Dailys}
+Las \textit{Dailys} son reuniones diarias de 15 minutos donde el equipo de desarrollo, habla del desarrollo.
+Cada miembro del equipo expone brevemente:
+\begin{itemize}
+    \item ¿Qué hice ayer para contribuir al objetivo del \textit{sprint}?
+    \item ¿Qué haré hoy para contribuir al objetivo del \textit{sprint}?
+    \item ¿Hay algún impedimento que me bloquee?
+\end{itemize}
+Por ejemplo para el objetivo de este \textit{sprint} un desarrollador comentaría:
+\begin{itemize}
+    \item Ayer desarrollé el \textit{endpoint} de \texttt{/books} y realicé pruebas unitarias para validar la carga del listado.
+    \item Ajustar la paginación para mejorar tiempos de cargas.
+    \item Estamos a la espera de que la editorial y el proveedor de contenido validen y entreguen el catálogo actualizado de libros, incluyendo portadas correctas, descripciones y metadatos.
+\end{itemize}
+El \textit{Scrum Master} en las \textit{dailys} ayuda a detectar y recopilar todos los impedimentos, pero las soluciones se tratan fuera de las \textit{dailys}, donde el enfoque es informar, no debatir posibles soluciones a los impedimentos.
+
+\subsection{Sprint Review}
+La \textit{Review} es la oportunidad de mostrar lo que ya está terminado, de una manera práctica mostrando el \textbf{incremento real del producto}, que en el caso de este \textit{sprint} podríamos incluir pantallas funcionales del catálogo de esta librería.
+
+Esta reunión se realiza cada quincena al final de cada \textit{sprint}, con una duración aproximada de 1 hora, donde se reunirá todo el equipo, PO y \textit{Scrum Master} junto a los \textit{stakeholders}.
+
+El \textit{Product Owner} valida las historias completadas y los \textit{stakeholders} aportan \textit{feedback}. Esto permite ajustar prioridades para el siguiente \textit{sprint} y mantener el desarrollo centrado en el valor.
+Una vez terminada esta reunión se subirá el desarrollo a \textbf{producción} dependiendo de si está completa o no la \textit{release}.
+
+\subsection{Sprint Retrospective}
+Se realiza después de la \textit{Sprint Review}, con una duración de 1 hora, al final de cada \textit{sprint}. En ella se reúne el equipo y \textit{Scrum Master} para evaluar el \textit{sprint}.
+
+En esta reunión se analizarán las cosas que se hicieron bien, las cosas mejorables y qué acciones se deben aplicar para el siguiente \textit{sprint}.
+Por ejemplo en este \textit{sprint} se podrían detectar los problemas recurrentes con datos de inventario, como solución en la reunión se propone mejorar la sincronización con la base de datos y se establece un encargado y cuándo se podría llevar a cabo esta mejora teniendo en cuenta las etapas de desarrollo de los \textit{sprints}.
+
+\subsection{Reunión con el Área de Atención al Cliente}
+Se realiza cada \textit{sprint} antes de la \textit{Planning} y es una reunión del equipo y PO junto al personal de atención al cliente.
+
+En esta reunión de una duración aproximada de 45 minutos, el equipo revisa los flujos de incidencias de envío, la validación de formularios de soporte y discuten distintos escenarios para que el equipo tenga más contexto del producto. Con ello el equipo podrá asegurar que en la web se refleja la realidad operativa de la librería.
+
+\subsection{Reunión de Validación Multilenguaje y Accesibilidad}
+Esta reunión se realizará cada 3 \textit{sprints} con una duración aproximada de 1 hora donde se reunirán el equipo, expertos UX y un traductor/validador.
+
+Debido a que \textit{Relatos de papel} quiere priorizar las traducciones y adaptaciones a discapacidades, cada cierto tiempo se realizará una reunión donde se revisarán traducciones, se harán pruebas con lectores de pantalla y se verificará la usabilidad para las distintas capacidades.
+Esto lo que busca es un público internacional y diverso para la web y una accesibilidad para todo el mundo.
+
+\section{Calendario y Cronograma de Sprints}
+Para garantizar un ritmo sostenible y predecible, se establece una cadencia fija de 2 semanas por \textit{Sprint}.
+Se ha diseñado un ciclo operativo de Miércoles a Martes. Esta estrategia busca evitar los cierres de \textit{sprint} en viernes, evitando el riesgo de realizar despliegues o actualizaciones críticas justo antes del fin de semana, cuando la capacidad de reacción es menor.
+
+\textbf{Horarios y Rutinas:} La jornada laboral del equipo es de 9:00 a 18:00 (con pausa para comer). Se ha establecido la política de realizar los eventos síncronos (\textit{Dailys}, \textit{Planning} y \textit{Review}) a primera hora (09:15 AM).
+
+\textbf{Justificación:} Esta decisión busca asegurar la puntualidad del equipo al inicio de la jornada y liberar el resto del día de interrupciones. Al concentrar la gestión a primera hora, se protegen bloques largos de tiempo de desarrollo ininterrumpido incentivando la productividad de los programadores.
+
+\textbf{Innovación y Mejora Continua (Hack Time):} Inspirados en la cultura de Spotify [\textit{Método Spotify}], se reserva la tarde de los martes de cierre de \textit{Sprint} (después de la \textit{Retrospective}, de 12:15 a 18:00) como un espacio flexible:
+\begin{enumerate}
+    \item \textbf{Prioridad 1 - Estabilización:} Si surgieron incidencias críticas tras la \textit{Sprint Review}, este tiempo se dedica obligatoriamente a \textit{hotfixes} para asegurar la estabilidad de la entrega antes del despliegue.
+    \item \textbf{Prioridad 2 - Pago de Deuda Técnica:} Si la entrega es estable pero durante el \textit{Sprint} se tomaron "atajos técnicos" conscientes para llegar a la fecha (código complejo, falta de comentarios, \textit{tests} pendientes de refactorizar), este tiempo se invierte en sanear el código. \textbf{Regla de oro:} No se inicia la innovación si el código base está "sucio" o es difícil de mantener.
+    \item \textbf{Prioridad 3 - Innovación:} Si la entrega fue exitosa y el código está saneado, el equipo dedica este tiempo a investigar nuevas ideas, probar nuevas librerías, realizar formación interna o compartir conocimientos. Esto incentiva al equipo a entregar código de calidad durante el \textit{sprint} para poder liberar su tiempo de investigación, además de fomentar la motivación, reducir el \textit{burnout} y mantener al equipo actualizado tecnológicamente.
+\end{enumerate}
+
+\textbf{Code Freeze (Jueves S2):} Se recomienda cerrar el código el jueves para dedicar el viernes y lunes de la semana 2 y 3 a pruebas finales de integración y preparación del entorno de demostración.
+
+A continuación, se presenta la simulación del \textit{sprint} tipo del proyecto "Relatos de Papel".
+
 
 \begin{table}[h!]
 \centering
+\caption{Visualización del Sprint Tipo}
 \small
 \begin{tabular}{|p{1.5cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|}
 \hline
@@ -39,27 +314,22 @@ Se recomienda cerrar el código el jueves para dedicar el viernes y lunes de la 
 \caption{Simulación del Sprint Tipo}
 \end{table}
 
-\section{Estrategia de Desarrollo, Infraestructura y Despliegue}
+\section{Prácticas de Colaboración}
+
+\subsection{Estrategia de Desarrollo, Infraestructura y Despliegue}
 Para asegurar un flujo de trabajo ordenado, automatizado y predecible, se define la siguiente arquitectura técnica y política de entregas basada en \textbf{GitHub Flow}.
 
-\subsection{Gestión de Ramas y Entornos}
+\subsubsection{Gestión de Ramas y Entornos}
 \begin{itemize}
     \item \textbf{Rama \texttt{main} (Staging / Pre-producción):} Es la rama de integración continua. Todo código aquí ha pasado revisión y pruebas.
-    \begin{itemize}
-        \item \textit{Entorno Asociado:} \textbf{Staging}. Es un espejo de producción utilizado para QA y validación del Product Owner.
-    \end{itemize}
-    
+    \item \textbf{Entorno Asociado:} \textit{Staging}. Es un espejo de producción utilizado para QA y validación del \textit{Product Owner}.
     \item \textbf{Rama \texttt{prod} (Producción):} Contiene exclusivamente el código estable y aprobado para los usuarios finales.
-    \begin{itemize}
-        \item \textit{Entorno Asociado:} \textbf{Producción}. El entorno vivo de la librería.
-    \end{itemize}
-    
-    \item \textbf{Ramas \texttt{feat/*}, \texttt{fix/*} y \texttt{refactor/*}:} Ramas temporales de vida corta para desarrollo. Se eliminan tras integrarse en \texttt{main}.
+    \item \textbf{Entorno Asociado:} Producción. El entorno vivo de la librería.
+    \item \textbf{Ramas \texttt{feat/*}, \texttt{fix/*} y \texttt{refactor/}:} Ramas temporales de vida corta para desarrollo. Se eliminan tras integrarse en \texttt{main}.
 \end{itemize}
 
-\subsection{Pipeline de CI/CD y Política de Entregas}
+\subsubsection{Pipeline de CI/CD y Política de Entregas}
 La automatización se gestiona mediante \textbf{GitHub Actions}, integrando las reglas de negocio con la ejecución técnica:
-
 \begin{enumerate}
     \item \textbf{Integración Continua (CI) - Al abrir Pull Request}
     \begin{itemize}
@@ -67,35 +337,35 @@ La automatización se gestiona mediante \textbf{GitHub Actions}, integrando las 
         \item \textbf{Acciones Automáticas:}
         \begin{itemize}
             \item Instalación de dependencias.
-            \item \textbf{Linter:} Revisión automática de estilo de código.
-            \item \textbf{Tests:} Ejecución de pruebas unitarias (mínimo 80\% cobertura requerida).
+            \item \textit{Linter}: Revisión automática de estilo de código.
+            \item \textit{Tests}: Ejecución de pruebas unitarias (mínimo 80\% cobertura requerida).
         \end{itemize}
-        \item \textbf{Política:} Si algún paso falla, se bloquea el merge. El código no puede integrarse hasta que esté "verde".
+        \item \textbf{Política:} Si algún paso falla, se bloquea el \textit{merge}. El código no puede integrarse hasta que esté "verde".
     \end{itemize}
 
     \item \textbf{Despliegue Continuo a Staging - Al hacer Merge}
     \begin{itemize}
-        \item \textbf{Disparador:} Aprobación de la PR y fusión (merge) en \texttt{main}.
-        \item \textbf{Acciones Automáticas:} Build de la aplicación y despliegue inmediato al entorno de \textbf{Staging}.
-        \item \textbf{Política:} Cada Historia de Usuario terminada debe estar disponible en Staging lo antes posible para su validación por QA/PO durante el Sprint.
+        \item \textbf{Disparador:} Aprobación de la PR y fusión (\textit{merge}) en \texttt{main}.
+        \item \textbf{Acciones Automáticas:} \textit{Build} de la aplicación y despliegue inmediato al entorno de \textit{Staging}.
+        \item \textbf{Política:} Cada Historia de Usuario terminada debe estar disponible en \textit{Staging} lo antes posible para su validación por QA/PO durante el \textit{Sprint}.
     \end{itemize}
 
     \item \textbf{Entrega a Producción - Cierre de Sprint}
     \begin{itemize}
-        \item \textbf{Disparador:} Aprobación del incremento en la Sprint Review (Martes) y coincidencia con plan de Release.
-        \item \textbf{Acciones:} Creación de Pull Request de \texttt{main} hacia \texttt{prod}.
-        \item \textbf{Política de Ventana de Mantenimiento:} Aunque el código esté listo el martes tras la Review, el despliegue a Producción se programa para el \textbf{miércoles por la mañana}. Esto asegura disponibilidad del equipo técnico para monitorizar el despliegue y evita incidencias a última hora del día.
+        \item \textbf{Disparador:} Aprobación del incremento en la \textit{Sprint Review} (Martes) y coincidencia con plan de \textit{Release}.
+        \item \textbf{Acciones:} Creación de \textit{Pull Request} de \texttt{main} hacia \texttt{prod}.
+        \item \textbf{Política de Ventana de Mantenimiento:} Aunque el código esté listo el martes tras la \textit{Review}, el despliegue a Producción se programa para el miércoles por la mañana. Esto asegura disponibilidad del equipo técnico para monitorizar el despliegue y evita incidencias a última hora del día.
     \end{itemize}
 \end{enumerate}
 
-\section{Definition of Done (DoD)}
+\subsection{Definition of Done (DoD)}
 Para garantizar la calidad técnica y evitar deuda técnica, el equipo acuerda que ninguna Historia de Usuario se considerará terminada a menos que cumpla estrictamente con la siguiente lista de verificación:
 
 \textbf{Checklist:}
 \begin{itemize}
-    \item \textbf{Código:} El código ha sido subido al repositorio, sigue los estándares de estilo, ha pasado una revisión (Code Review) mediante una Pull Request aprobada y está correctamente mergeado en la rama \texttt{main}.
-    \item \textbf{Entorno:} La funcionalidad está desplegada y validada en el entorno de \textbf{Staging}.
-    \item \textbf{Pruebas:} Se han superado los tests unitarios (ejecutados por GitHub Actions) con una cobertura superior al 80\%, y las pruebas de integración básicas.
+    \item \textbf{Código:} El código ha sido subido al repositorio, sigue los estándares de estilo, ha pasado una revisión (\textit{Code Review}) mediante una \textit{Pull Request} aprobada y está correctamente \textit{mergeado} en la rama \texttt{main}.
+    \item \textbf{Entorno:} La funcionalidad está desplegada y validada en el entorno de \textit{Staging}.
+    \item \textbf{Pruebas:} Se han superado los \textit{tests} unitarios (ejecutados por \textit{GitHub Actions}) con una cobertura superior al 80\%, y las pruebas de integración básicas.
     \item \textbf{Criterios de Aceptación:} Se cumplen todos los requisitos específicos detallados en la Historia de Usuario y todas las tareas técnicas asociadas han sido cerradas.
     \item \textbf{Accesibilidad:} Los elementos de interfaz cuentan con etiquetas ARIA, son navegables por teclado y están traducidos a los idiomas seleccionados.
     \item \textbf{No Bugs:} No existen errores críticos o de funcionalidad conocidos asociados a la tarea.
@@ -103,53 +373,35 @@ Para garantizar la calidad técnica y evitar deuda técnica, el equipo acuerda q
     \item \textbf{Documentación:} La documentación técnica ha sido actualizada reflejando los cambios.
 \end{itemize}
 
-% Aquí iría la imagen de la captura
-\begin{center}
-    \fbox{\parbox{10cm}{\centering \vspace{1cm} [TODO: INSERTAR CAPTURA JIRA HU] \vspace{1cm}}}
-\end{center}
-
-\section{Prácticas de Colaboración y Gestión de Impedimentos}
+\subsection{Prácticas de Colaboración y Gestión de Impedimentos}
 Para mantener la fluidez del trabajo, se establecen los siguientes mecanismos de comunicación:
 
-\subsection*{Gestión Visual del Trabajo}
-Utilizaremos un tablero digital Jira con las siguientes columnas para visualizar el flujo de valor:
-\begin{center}
-    \texttt{Backlog $\rightarrow$ Sprint Backlog $\rightarrow$ In Progress $\rightarrow$ Code Review $\rightarrow$ Testing/QA $\rightarrow$ DONE}
-\end{center}
+\textbf{Gestión Visual del Trabajo:} Utilizaremos un tablero digital Jira con las siguientes columnas para visualizar el flujo de valor:
+\texttt{Backlog} $\rightarrow$ \texttt{Sprint Backlog} $\rightarrow$ \texttt{In Progress} $\rightarrow$ \texttt{Code Review} $\rightarrow$ \texttt{Testing/QA} $\rightarrow$ \texttt{DONE}.
 
-% Aquí iría la imagen de la captura de listas
-\begin{center}
-    \fbox{\parbox{10cm}{\centering \vspace{1cm} [TODO: INSERTAR CAPTURA JIRA LISTAS] \vspace{1cm}}}
-\end{center}
-
-\subsection*{Canales de Comunicación}
+\textbf{Canales de Comunicación}
 \begin{itemize}
-    \item \textbf{Síncrona:} Se utilizará un canal de chat en Teams con canales temáticos y mensajes directos.
-    \item \textbf{Regla:} Si una duda técnica requiere más de 5 mensajes de chat, se hace una videollamada rápida. Todas las videollamadas y reuniones se realizarán a través de la herramienta Microsoft Teams y serán grabadas para poder revisar la conversación.
+    \item \textbf{Síncrona:} Se utilizará un canal de chat en Teams con canales temáticos y mensajes directos. \textbf{Regla:} Si una duda técnica requiere más de 5 mensajes de chat, se hace una videollamada rápida. Todas las videollamadas y reuniones se realizarán a través de la herramienta Microsoft Teams y serán grabadas para poder revisar la conversación.
     \item \textbf{Asíncrona:} Las decisiones técnicas y funcionales quedarán registradas en los comentarios de la tarjeta de la tarea Jira para evitar pérdida de información.
 \end{itemize}
 
-\subsection*{Protocolo de Gestión de Impedimentos}
-Un impedimento es cualquier factor que bloquee el progreso.
-
+\textbf{Protocolo de Gestión de Impedimentos:} Un impedimento es cualquier factor que bloquee el progreso.
 \begin{itemize}
     \item \textbf{Detección:} Se mueve la HU al listado \texttt{Blocked} en el tablero digital inmediatamente.
-    \item \textbf{Acción:} Es responsabilidad del Scrum Master eliminar el bloqueo. Si no puede resolverlo directamente, debe encontrar a la persona adecuada en la organización para hacerlo.
-    \item \textbf{Seguimiento:} Si el impedimento pone en riesgo el Objetivo del Sprint, se comunica al Product Owner para gestionar expectativas.
+    \item \textbf{Acción:} Es responsabilidad del \textit{Scrum Master} eliminar el bloqueo. Si no puede resolverlo directamente, debe encontrar a la persona adecuada en la organización para hacerlo.
+    \item \textbf{Seguimiento:} Si el impedimento pone en riesgo el Objetivo del \textit{Sprint}, se comunica al \textit{Product Owner} para gestionar expectativas.
 \end{itemize}
 
-\section{Gestión de Cambios durante el Sprint}
-Aunque Scrum requiere estabilidad para garantizar el foco del equipo, el proyecto debe mantener flexibilidad ante las necesidades cambiantes del mercado. Para gestionar esta tensión, se distinguen el siguiente protocolo de actuación:
+\subsection{Gestión de Cambios durante el Sprint}
+Aunque \textit{Scrum} requiere estabilidad para garantizar el foco del equipo, el proyecto debe mantener flexibilidad ante las necesidades cambiantes del mercado. Para gestionar esta tensión, se distinguen el siguiente protocolo de actuación:
 
-\textbf{Cambios funcionales solicitados por el negocio:}
-Cualquier solicitud de cambio en los requisitos (nuevas funcionalidades o modificaciones de las existentes) debe seguir este flujo:
-
-\begin{enumerate}
-    \item \textbf{Registro:} Las solicitudes se canalizan a través del Product Owner.
+\textbf{Cambios funcionales solicitados por el negocio:} Cualquier solicitud de cambio en los requisitos (nuevas funcionalidades o modificaciones de las existentes) debe seguir este flujo:
+\begin{itemize}
+    \item \textbf{Registro:} Las solicitudes se canalizan a través del \textit{Product Owner}.
     \item \textbf{Evaluación de Impacto:}
     \begin{itemize}
-        \item \textbf{Bajo Impacto / No Urgente:} Se documenta como Historia de Usuario en el Product Backlog para ser priorizada en futuros Sprints.
-        \item \textbf{Alto Impacto / Urgencia Crítica:} Si el cambio es vital y no puede esperar, se aplica la \textit{regla del intercambio}: El Product Owner debe retirar del Sprint Backlog actual una o varias tareas de esfuerzo equivalente que aún no hayan comenzado (estado To Do).
+        \item \textbf{Bajo Impacto / No Urgente:} Se documenta como Historia de Usuario en el \textit{Product Backlog} para ser priorizada en futuros \textit{Sprints}.
+        \item \textbf{Alto Impacto / Urgencia Crítica:} Si el cambio es vital y no puede esperar, se aplica la regla del intercambio: El \textit{Product Owner} debe retirar del \textit{Sprint Backlog} actual una o varias tareas de esfuerzo equivalente que aún no hayan comenzado (estado \texttt{To Do}).
     \end{itemize}
-    \item \textbf{Aprendizaje:} Si un cambio invalida trabajo ya completado, se trata como un "desperdicio" y se analiza en la Sprint Retrospective para mejorar la toma de requisitos futura.
-\end{enumerate}
+    \item \textbf{Aprendizaje:} Si un cambio invalida trabajo ya completado, se trata como un "desperdicio" y se analiza en la \textit{Sprint Retrospective} para mejorar la toma de requisitos futura.
+\end{itemize}
