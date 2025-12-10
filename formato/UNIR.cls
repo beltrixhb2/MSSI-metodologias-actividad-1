@@ -233,8 +233,8 @@
             \end{tabularx}
         \end{table}
         \vspace{0.5cm}
-        {\flushleft \fontsize{11}{11}\selectfont %
+        {\flushleft \fontsize{15}{15}\selectfont %
                 \vspace{0.5cm}
-                Presentado por: \georgiamd \autorv \par
+                \georgiamd \autorv \par
         }
     \end{titlepage}}

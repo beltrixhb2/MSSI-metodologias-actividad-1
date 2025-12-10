@@ -11,7 +11,7 @@ El \textit{Scrum Master} ejercerá como líder servicial (\textit{servant-leader
 \begin{description}
     \item[Facilitador y Guardián del Proceso:] Es responsable de asegurar que los eventos (\textit{Sprint Planning}, \textit{Daily Scrum}, \textit{Sprint Review} y \textit{Sprint Retrospective}) se realicen, se mantengan dentro del bloque de tiempo (\textit{time-box}) y sean productivos.
     
-    \item[Gestión de Impedimentos:] Dado el carácter distribuido del equipo, su labor crítica será eliminar bloqueos técnicos o burocráticos (ej.\ retrasos en la entrega de metadatos de libros por parte de la editorial o problemas de acceso a VPN).
+    \item[Gestión de Impedimentos:] Dado el carácter distribuido del equipo, su labor crítica será eliminar bloqueos técnicos o burocráticos.
     
     \item[Gestión de la herramienta:] Administrará la configuración del tablero Jira y Teams para asegurar la transparencia del trabajo en curso.
 \end{description}
@@ -23,7 +23,7 @@ El \textit{Product Owner} es el responsable de maximizar el valor del producto e
 \begin{description}
     \item[Gestión de la Visión:] Traduce las necesidades de negocio (venta de libros, experiencia de lectura) en Historias de Usuario claras y priorizadas.
     
-    \item[Priorización por Valor:] Decide el orden de implementación basándose en el retorno de inversión (ROI) y la criticidad para el lanzamiento (MVP), priorizando, por ejemplo, el catálogo y el carrito de compra sobre funcionalidades secundarias como foros sociales.
+    \item[Priorización por Valor:] Decide el orden de implementación basándose en el retorno de inversión (ROI) y la criticidad para el lanzamiento (MVP), priorizando, por ejemplo, el catálogo y el carrito de compra sobre funcionalidades secundarias.
     
     \item[Aceptación de Incrementos:] Es la única persona con autoridad para aceptar o rechazar las Historias de Usuario al final del \textit{Sprint}, basándose en la \textit{Definition of Done} y los Criterios de Aceptación.
 \end{description}
@@ -42,7 +42,7 @@ Para mitigar el riesgo de un equipo reducido, adoptamos un enfoque de \textbf{co
     \item[Calidad Continua:] Son responsables directos de la calidad técnica, aplicando prácticas de integración continua y manteniendo la cobertura de pruebas (QA).
 \end{description}
 
-\section{Identificación de Stakeholders (Interesados)}
+\section{Identificación de Stakeholders}
 
 Para garantizar el éxito de \textit{``Relatos de Papel''}, es vital identificar y colaborar activamente con los interesados externos al equipo Scrum, cuya retroalimentación es esencial durante la \textit{Sprint Review}. Se han identificado los siguientes perfiles clave:
 
@@ -66,7 +66,8 @@ Esta interacción es constante y tiene propósitos específicos en cada evento:
 \end{itemize}
 
 Este flujo garantiza una retroalimentación continua y asegura que el trabajo del equipo se mantenga siempre adaptado a los objetivos del negocio.
-\chapter{Artefactos clave: Product Backlog y Sprint Backlogs}
+
+\chapter{Gestión de Requisitos y Alcance}
 
 \section{Product Backlog}
 En nuestra metodología basada en \textit{Scrum}, el \textit{Product Backlog} se establecerá como el principal componente de gestión del proyecto \textit{``Relatos de Papel''} y el repositorio central donde se mantienen las Historias de Usuario y funcionalidades que debe cumplir el sistema. Se definirá como una lista priorizada, detallada y estimada de Historias de Usuario expresadas en un lenguaje comprensible para el cliente, lo que garantizará que todos los \textit{stakeholders} compartan una visión única del producto durante todo el desarrollo
@@ -256,7 +257,7 @@ El cierre del \textit{Sprint Backlog} durante la reunión de planificación marc
 
 La creación y el almacenamiento de este \textit{Product Backlog} se realizará con la herramienta \textbf{Jira}.
 
-\chapter{Eventos, Prácticas de Colaboración y Calendario}
+\chapter{Ciclo de Vida y Eventos}
 
 \section{Eventos Scrum}
 
@@ -367,12 +368,12 @@ A continuación, se presenta la simulación del \textit{Sprint} tipo del proyect
 \caption{Visualización del Sprint Tipo}
 \end{table}
 
-\section{Prácticas de Colaboración}
+\chapter{Prácticas de Ingeniería y Calidad}
 
-\subsection{Estrategia de Desarrollo, Infraestructura y Despliegue}
+\section{Estrategia de Desarrollo, Infraestructura y Despliegue}
 Para asegurar un flujo de trabajo ordenado, automatizado y predecible, se define la siguiente arquitectura técnica y política de entregas basada en \textbf{GitHub Flow}.
 
-\subsubsection{Gestión de Ramas y Entornos}
+\subsection{Gestión de Ramas y Entornos}
 \begin{itemize}
     \item \textbf{Rama \texttt{main} (Staging / Pre-producción):} Es la rama de integración continua. Todo código aquí ha pasado revisión y pruebas.
     \item \textbf{Entorno Asociado:} \textit{Staging}. Es un espejo de producción utilizado para QA y validación del \textit{Product Owner}.
@@ -381,7 +382,7 @@ Para asegurar un flujo de trabajo ordenado, automatizado y predecible, se define
     \item \textbf{Ramas \texttt{feat/*}, \texttt{fix/*} y \texttt{refactor/}:} Ramas temporales de vida corta para desarrollo. Se eliminan tras integrarse en \texttt{main}.
 \end{itemize}
 
-\subsubsection{Pipeline de CI/CD y Política de Entregas}
+\subsection{Pipeline de CI/CD y Política de Entregas}
 La automatización se gestiona mediante \textbf{GitHub Actions}, integrando las reglas de negocio con la ejecución técnica:
 \begin{enumerate}
     \item \textbf{Integración Continua (CI) --- Al abrir Pull Request}
@@ -411,7 +412,7 @@ La automatización se gestiona mediante \textbf{GitHub Actions}, integrando las 
     \end{itemize}
 \end{enumerate}
 
-\subsection{Definition of Done (DoD)}
+\section{Definition of Done (DoD)}
 Para garantizar la calidad técnica y evitar deuda técnica, el equipo acuerda que ninguna Historia de Usuario se considerará terminada a menos que cumpla estrictamente con la siguiente lista de verificación:
 
 \textbf{Checklist:}
@@ -426,7 +427,7 @@ Para garantizar la calidad técnica y evitar deuda técnica, el equipo acuerda q
     \item \textbf{Documentación:} La documentación técnica ha sido actualizada reflejando los cambios.
 \end{itemize}
 
-\subsection{Prácticas de Colaboración y Gestión de Impedimentos}
+\section{Prácticas de Colaboración y Gestión de Impedimentos}
 Para mantener la fluidez del trabajo, se establecen los siguientes mecanismos de comunicación:
 
 \textbf{Gestión Visual del Trabajo:} Utilizaremos un tablero digital Jira con las siguientes columnas para visualizar el flujo de valor:
@@ -451,7 +452,7 @@ Para mantener la fluidez del trabajo, se establecen los siguientes mecanismos de
     \item \textbf{Seguimiento:} Si el impedimento pone en riesgo el Objetivo del \textit{Sprint}, se comunica al \textit{Product Owner} para gestionar expectativas.
 \end{enumerate}
 
-\subsection{Gestión de Cambios durante el Sprint}
+\section{Gestión de Cambios durante el Sprint}
 Aunque \textit{Scrum} requiere estabilidad para garantizar el foco del equipo, el proyecto debe mantener flexibilidad ante las necesidades cambiantes del mercado. Para gestionar esta tensión, se distinguen el siguiente protocolo de actuación:
 
 \textbf{Cambios funcionales solicitados por el negocio:} Cualquier solicitud de cambio en los requisitos (nuevas funcionalidades o modificaciones de las existentes) debe seguir este flujo:
@@ -465,7 +466,7 @@ Aunque \textit{Scrum} requiere estabilidad para garantizar el foco del equipo, e
     \item \textbf{Aprendizaje:} Si un cambio invalida trabajo ya completado, se trata como un ``desperdicio'' y se analiza en la \textit{Sprint Retrospective} para mejorar la toma de requisitos futura.
 \end{itemize}
 
-\chapter{Métricas y Herramientas de Seguimiento}
+\chapter{Herramientas y Métricas de Seguimiento}
 
 \section{Propósito de las métricas}
 
@@ -523,29 +524,7 @@ Si la línea roja está por debajo de la gris, el equipo avanza más rápido de 
 Indicará cuántos \textit{Story Points} ha completado el equipo en un \textit{Sprint}.
 
 \textbf{¿Cómo se va a calcular e interpretar?}
-La \textit{Velocity} se calculará mediante la suma de \textit{Story Points} (SP) de todas las Historias de Usuario completadas. Un SP es una unidad para estimar tiempo, esfuerzo, complejidad e incertidumbre.
-
-\begin{itemize}
-    \item Historias con menos SP: Tareas más pequeñas, menos complejas.
-    \item Historias con más SP: Tareas más complejas, largas y difíciles.
-\end{itemize}
-Para estimar se utilizará la secuencia de Fibonacci: 1, 2, 3, 5, 8, 13, 20, 40... Cuanto mayor sea el número, mayor la dificultad.
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|l|l|l|l|}
-\hline
-\textbf{SP} & \textbf{Tiempo} & \textbf{Esfuerzo} & \textbf{Complejidad} & \textbf{Incertidumbre} \\ \hline
-1 & Unos minutos & Mínimo & Muy baja & Muy baja \\ \hline
-2 & Unas horas & Mínimo & Muy baja & Baja \\ \hline
-3 & Un día & Medio & Baja & Media-Baja \\ \hline
-5 & Unos días & Moderado & Media & Media \\ \hline
-8 & Una semana & Alto & Media & Media-Alta \\ \hline
-13 & Un mes & Muy alto & Alta & Alta \\ \hline
-20 & Unos meses & Máximo & Muy alta & Muy alta \\ \hline
-\end{tabular}
-\caption{Ejemplo de estimación con Story Points}
-\end{table}
+La \textit{Velocity} se calculará mediante la suma de \textit{Story Points} (SP) de todas las Historias de Usuario completadas.
 
 \begin{table}[H]
 \centering
