@@ -180,7 +180,7 @@
     \rhead{\asignaturav}%
     \lfoot{{\color{azul}\titulov}}%
     \cfoot{}%
-    \rfoot{\thepage\ of \getpagerefnumber{LastPage}}}
+    \rfoot{\thepage\ de \getpagerefnumber{LastPage}}}
 
 \fancypagestyle{frontmatter}{%
     \fancyhead{}%

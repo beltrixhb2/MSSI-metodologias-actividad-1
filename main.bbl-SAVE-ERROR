@@ -16,5 +16,38 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global/global}
+    \entry{ejemplo2023}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=75c8438d77d5849593361c7f3ad493f8}{%
+           family={Apellido},
+           familyi={A\bibinitperiod},
+           given={Nombre},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Editorial Ejemplo}%
+      }
+      \strng{namehash}{75c8438d77d5849593361c7f3ad493f8}
+      \strng{fullhash}{75c8438d77d5849593361c7f3ad493f8}
+      \strng{fullhashraw}{75c8438d77d5849593361c7f3ad493f8}
+      \strng{bibnamehash}{75c8438d77d5849593361c7f3ad493f8}
+      \strng{authorbibnamehash}{75c8438d77d5849593361c7f3ad493f8}
+      \strng{authornamehash}{75c8438d77d5849593361c7f3ad493f8}
+      \strng{authorfullhash}{75c8438d77d5849593361c7f3ad493f8}
+      \strng{authorfullhashraw}{75c8438d77d5849593361c7f3ad493f8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Título del libro de ejemplo}
+      \field{year}{2023}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

@@ -16,3 +16,5 @@ main.lot
 *.fls   
 *.fdb_latexmk
 *.synctex.gz
+*.bbl-SAVE-ERROR
+contenido/*.aux
