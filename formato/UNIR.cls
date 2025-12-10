@@ -1,3 +1,4 @@
+\usepackage[utf8]{inputenc}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{formato/UNIR}[2018/09/01 UNIR TFM LaTeX class]
 

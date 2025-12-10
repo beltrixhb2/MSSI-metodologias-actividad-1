@@ -11,7 +11,7 @@ El \textit{Scrum Master} ejercerá como líder servicial (\textit{servant-leader
 \begin{description}
     \item[Facilitador y Guardián del Proceso:] Es responsable de asegurar que los eventos (\textit{Sprint Planning}, \textit{Daily Scrum}, \textit{Sprint Review} y \textit{Sprint Retrospective}) se realicen, se mantengan dentro del bloque de tiempo (\textit{time-box}) y sean productivos.
     
-    \item[Gestión de Impedimentos:] Dado el carácter distribuido del equipo, su labor crítica será eliminar bloqueos técnicos o burocráticos (ej. retrasos en la entrega de metadatos de libros por parte de la editorial o problemas de acceso a VPN).
+    \item[Gestión de Impedimentos:] Dado el carácter distribuido del equipo, su labor crítica será eliminar bloqueos técnicos o burocráticos (ej.\ retrasos en la entrega de metadatos de libros por parte de la editorial o problemas de acceso a VPN).
     
     \item[Gestión de la herramienta:] Administrará la configuración del tablero Jira y Teams para asegurar la transparencia del trabajo en curso.
 \end{description}
@@ -125,13 +125,12 @@ El formato de cada Historia de Usuario incluida en el \textit{Product Backlog} e
     \item \textbf{Notas.} Información adicional relevante (comentarios, aclaraciones, decisiones tomadas o referencias externas) que facilite la comprensión y el refinamiento de la historia. El nivel de detalle dependerá de su prioridad: las historias de mayor prioridad estarán más refinadas y detalladas.
 \end{itemize}
 
-En la Figura \ref{fig:historia-usuario-ejemplo} se incluye un ejemplo de la definición de una Historia de Usuario del \textit{Product Backlog} del proyecto \textit{``Relatos de Papel''}.
+En la Figura~\ref{fig:historia-usuario-ejemplo} se incluye un ejemplo de la definición de una Historia de Usuario del \textit{Product Backlog} del proyecto \textit{``Relatos de Papel''}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{contenido/imagenes/figura1.png}
-    \caption{Historia de Usuario definida en el \textit{Product Backlog} del proyecto \textit{``Relatos de Papel''} y que recoge una de las funcionalidades que debe implementar el sistema.}
-    \label{fig:historia-usuario-ejemplo}
+    \caption{Historia de Usuario definida en el \textit{Product Backlog} del proyecto \textit{``Relatos de Papel''} y que recoge una de las funcionalidades que debe implementar el sistema.}\label{fig:historia-usuario-ejemplo}
 \end{figure}
 
 \subsection{Estimación de las Historias de Usuario}
@@ -139,23 +138,21 @@ El esfuerzo de las Historias de Usuario del \textit{Product Backlog} se estimar�
 
 La asignación de puntos se basará en la \textbf{secuencia de Fibonacci}, lo que ayuda al equipo a centrarse en el tamaño relativo de las historias. Así, una historia estimada con más puntos implicará un esfuerzo proporcionalmente mayor que otra con un valor inferior.
 
-Como referencia inicial, el equipo utilizará una \textbf{matriz de \textit{Story Points}} (Figura \ref{fig:matriz-story-points}), una adaptación de la secuencia de Fibonacci que ofrece pautas más claras sobre cómo clasificar las tareas según su esfuerzo, complejidad y riesgo. Esta matriz evolucionará con la experiencia del equipo a lo largo de los \textit{Sprints}.
+Como referencia inicial, el equipo utilizará una \textbf{matriz de \textit{Story Points}} (Figura~\ref{fig:matriz-story-points}), una adaptación de la secuencia de Fibonacci que ofrece pautas más claras sobre cómo clasificar las tareas según su esfuerzo, complejidad y riesgo. Esta matriz evolucionará con la experiencia del equipo a lo largo de los \textit{Sprints}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{contenido/imagenes/figura2.png}
-    \caption{Ejemplo de matriz de \textit{Story Points} de referencia.}
-    \label{fig:matriz-story-points}
+    \caption{Ejemplo de matriz de \textit{Story Points} de referencia.}\label{fig:matriz-story-points}
 \end{figure}
 
-La estimación de puntos se realizará mediante la técnica \textbf{Planning Poker} (Figura \ref{fig:planning-poker}), que evita sesgos y favorece el consenso. Cada miembro del equipo seleccionará de forma individual una carta con un valor de Fibonacci, se revelarán las elecciones ante el resto del equipo, se discutirán las discrepancias y se repetirán las rondas hasta alcanzar un acuerdo. Este método fomenta el debate, identifica riesgos y promueve una comprensión compartida del trabajo, obteniendo estimaciones rápidas, colaborativas y suficientemente precisas para planificar.
+La estimación de puntos se realizará mediante la técnica \textbf{Planning Poker} (Figura~\ref{fig:planning-poker}), que evita sesgos y favorece el consenso. Cada miembro del equipo seleccionará de forma individual una carta con un valor de Fibonacci, se revelarán las elecciones ante el resto del equipo, se discutirán las discrepancias y se repetirán las rondas hasta alcanzar un acuerdo. Este método fomenta el debate, identifica riesgos y promueve una comprensión compartida del trabajo, obteniendo estimaciones rápidas, colaborativas y suficientemente precisas para planificar.
 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{contenido/imagenes/figura3.png}
-    \caption{Etapas de la técnica de estimación planning poker.}
-    \label{fig:planning-poker}
+    \caption{Etapas de la técnica de estimación planning poker.}\label{fig:planning-poker}
 \end{figure}
 
 \subsection{Priorización del Product Backlog}
@@ -168,20 +165,19 @@ Para complementar la priorización se empleará la técnica \textbf{MoSCoW}, que
     \item \textbf{Must have (Debe tener):} Funciones críticas esenciales para que el producto funcione correctamente y se considere exitoso.
     \item \textbf{Should have (Debería tener):} Funciones importantes que pueden mejorar el producto y deberían incluirse en la solución si resulta posible, pero no son esenciales para su éxito.
     \item \textbf{Could have (Podría tener):} Funciones deseables pero que no son urgentes e incluso podrían ser eliminadas. Se deben implementar solo si el tiempo y los recursos lo permiten.
-    \item \textbf{Won’t have (this time) (No tendrá, por ahora):} Funciones que no se consideran necesarias en este momento, aunque pueden reservarse para futuras versiones del producto.
+    \item \textbf{Won't have (this time) (No tendrá, por ahora):} Funciones que no se consideran necesarias en este momento, aunque pueden reservarse para futuras versiones del producto.
 \end{itemize}
 Esta clasificación asegurará que los elementos más valiosos y estratégicos se implementen primero, mientras que los menos prioritarios podrán posponerse sin afectar los objetivos del proyecto.
 
 \subsection{Mapas de Historias de Usuario}
 Para complementar el \textit{Product Backlog} y ayudar a su organización y priorización se construirá un \textbf{mapa de Historias de Usuario}, construyéndose un mapa para cada uno de los roles definidos en \textit{``Relatos de Papel''}: el usuario final y el usuario administrador. 
 
-En el nivel superior del mapa se situarán las \textbf{epopeyas} (Figura \ref{fig:epopeya}), es decir, las Historias de Usuario de mayor tamaño, funcionalidad y alcance. Las epopeyas se encuentran a un mayor nivel de abstracción que las Historias de Usuario, con un objetivo más estratégico. Debajo de cada una de ellas, se colocarán las Historias de Usuario en las que se descomponen. 
+En el nivel superior del mapa se situarán las \textbf{epopeyas} (Figura~\ref{fig:epopeya}), es decir, las Historias de Usuario de mayor tamaño, funcionalidad y alcance. Las epopeyas se encuentran a un mayor nivel de abstracción que las Historias de Usuario, con un objetivo más estratégico. Debajo de cada una de ellas, se colocarán las Historias de Usuario en las que se descomponen. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{contenido/imagenes/figura4.png}
-    \caption{Ejemplo de epopeya y las Historias de Usuario en las que se descompone.}
-    \label{fig:epopeya}
+    \caption{Ejemplo de epopeya y las Historias de Usuario en las que se descompone.}\label{fig:epopeya}
 \end{figure}
 
 Además, las epopeyas se pondrán de izquierda a derecha en función del orden en el que el usuario realice las actividades que definen en la aplicación y en la que mejor describa el sistema a implementar. A su vez, las Historias de Usuario que formen parte de una epopeya concreta se ordenarán de arriba hacia abajo en función de su prioridad. Esta vista de las Historias de Usuario jerarquizadas y priorizadas permitirán la definición de las diferentes versiones del sistema a entregar, o \textit{releases}, que se van a realizar, agrupando verticalmente aquellas historias que pertenezcan a la misma \textit{release}.
@@ -190,20 +186,18 @@ En el proyecto \textit{``Relatos de Papel''} se establecerá un mínimo de tres 
 
 El mapa de Historias de Usuario se diseñará en primera instancia empleando un \textit{template} de Excel, y una vez establecida su estructura, se construirá mediante la herramienta \textbf{Featmap}.
 
-En la Figura \ref{fig:mapa-hu-final} y la Figura \ref{fig:mapa-hu-admin} se recoge una previsualización de los mapas de Historias de Usuario que se establecerán para el usuario final y el usuario administrador del proyecto \textit{``Relatos de Papel''}.
+En la Figura~\ref{fig:mapa-hu-final} y la Figura~\ref{fig:mapa-hu-admin} se recoge una previsualización de los mapas de Historias de Usuario que se establecerán para el usuario final y el usuario administrador del proyecto \textit{``Relatos de Papel''}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{contenido/imagenes/figura5.jpg}
-    \caption{Mapa de historias de usuario del usuario cliente del proyecto \textit{``Relatos de Papel''} construido con Featmap.}
-    \label{fig:mapa-hu-final}
+    \caption{Mapa de historias de usuario del usuario cliente del proyecto \textit{``Relatos de Papel''} construido con Featmap.}\label{fig:mapa-hu-final}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{contenido/imagenes/figura6.jpg}
-    \caption{Mapa de historias de usuario del usuario administrador del proyecto \textit{``Relatos de Papel''} construido con Featmap.}
-    \label{fig:mapa-hu-admin}
+    \caption{Mapa de historias de usuario del usuario administrador del proyecto \textit{``Relatos de Papel''} construido con Featmap.}\label{fig:mapa-hu-admin}
 \end{figure}
 
 \subsection{Criterios de Aceptación de las Historias de Usuario}
@@ -308,8 +302,7 @@ La \textit{Sprint Review} es la oportunidad de mostrar lo que ya está terminado
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\linewidth]{contenido/imagenes/figura7.png}
-    \caption{Demostración de Sprint Review.}
-    \label{fig:sprint-review}
+    \caption{Demostración de Sprint Review.}\label{fig:sprint-review}
 \end{figure}
 
 Esta reunión se realiza cada quincena al final de cada \textit{Sprint}, con una duración aproximada de 1 hora, donde se reunirá todo el equipo, PO y \textit{Scrum Master} junto a los \textit{stakeholders}.
@@ -325,8 +318,7 @@ En esta reunión se analizarán las cosas que se hicieron bien, las cosas mejora
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{contenido/imagenes/figura8.png}
-    \caption{Plantilla utilizada durante la Sprint Retrospective.}
-    \label{fig:sprint-retrospective}
+    \caption{Plantilla utilizada durante la Sprint Retrospective.}\label{fig:sprint-retrospective}
 \end{figure}
 
 Por ejemplo en este \textit{Sprint} se podrían detectar los problemas recurrentes con datos de inventario, como solución en la reunión se propone mejorar la sincronización con la base de datos y se establece un encargado y cuándo se podría llevar a cabo esta mejora teniendo en cuenta las etapas de desarrollo de los \textit{Sprints}.
@@ -352,9 +344,9 @@ Se ha diseñado un ciclo operativo de Miércoles a Martes. Esta estrategia busca
 
 \textbf{Innovación y Mejora Continua (\textit{Hack Time}):} Inspirados en la cultura de Spotify\cite{kniberg2012spotify}, se reserva la tarde de los martes de cierre de \textit{Sprint} (después de la \textit{Sprint Retrospective}, de 12:15 a 18:00) como un espacio flexible:
 \begin{enumerate}
-    \item \textbf{Prioridad 1 - Estabilización:} Si surgieron incidencias críticas tras la \textit{Sprint Review}, este tiempo se dedica obligatoriamente a \textit{hotfixes} para asegurar la estabilidad de la entrega antes del despliegue.
-    \item \textbf{Prioridad 2 - Pago de Deuda Técnica:} Si la entrega es estable pero durante el \textit{Sprint} se tomaron ``atajos técnicos`` conscientes para llegar a la fecha (código complejo, falta de comentarios, \textit{tests} pendientes de refactorizar), este tiempo se invierte en sanear el código. \textbf{Regla:} No se inicia la innovación si el código base está ``sucio`` o es difícil de mantener.
-    \item \textbf{Prioridad 3 - Innovación:} Si la entrega fue exitosa y el código está saneado, el equipo dedica este tiempo a investigar nuevas ideas, probar nuevas librerías, realizar formación interna o compartir conocimientos. Esto incentiva al equipo a entregar código de calidad durante el \textit{Sprint} para poder liberar su tiempo de investigación, además de fomentar la motivación, reducir el \textit{burnout} y mantener al equipo actualizado tecnológicamente.
+    \item \textbf{Prioridad 1 --- Estabilización:} Si surgieron incidencias críticas tras la \textit{Sprint Review}, este tiempo se dedica obligatoriamente a \textit{hotfixes} para asegurar la estabilidad de la entrega antes del despliegue.
+    \item \textbf{Prioridad 2 --- Pago de Deuda Técnica:} Si la entrega es estable pero durante el \textit{Sprint} se tomaron ``atajos técnicos`` conscientes para llegar a la fecha (código complejo, falta de comentarios, \textit{tests} pendientes de refactorizar), este tiempo se invierte en sanear el código. \textbf{Regla:} No se inicia la innovación si el código base está ``sucio`` o es difícil de mantener.
+    \item \textbf{Prioridad 3 --- Innovación:} Si la entrega fue exitosa y el código está saneado, el equipo dedica este tiempo a investigar nuevas ideas, probar nuevas librerías, realizar formación interna o compartir conocimientos. Esto incentiva al equipo a entregar código de calidad durante el \textit{Sprint} para poder liberar su tiempo de investigación, además de fomentar la motivación, reducir el \textit{burnout} y mantener al equipo actualizado tecnológicamente.
 \end{enumerate}
 
 \textbf{\textit{Code Freeze} (Jueves S2):} Se recomienda cerrar el código el jueves para dedicar el viernes y lunes de la semana 2 y 3 a pruebas finales de integración y preparación del entorno de demostración.
@@ -392,7 +384,7 @@ Para asegurar un flujo de trabajo ordenado, automatizado y predecible, se define
 \subsubsection{Pipeline de CI/CD y Política de Entregas}
 La automatización se gestiona mediante \textbf{GitHub Actions}, integrando las reglas de negocio con la ejecución técnica:
 \begin{enumerate}
-    \item \textbf{Integración Continua (CI) - Al abrir Pull Request}
+    \item \textbf{Integración Continua (CI) --- Al abrir Pull Request}
     \begin{itemize}
         \item \textbf{Disparador:} Creación de una PR hacia \texttt{main}.
         \item \textbf{Acciones Automáticas:}
@@ -404,14 +396,14 @@ La automatización se gestiona mediante \textbf{GitHub Actions}, integrando las 
         \item \textbf{Política:} Si algún paso falla, se bloquea el \textit{merge}. El código no puede integrarse hasta que esté ``verde``.
     \end{itemize}
 
-    \item \textbf{Despliegue Continuo a Staging - Al hacer Merge}
+    \item \textbf{Despliegue Continuo a Staging --- Al hacer Merge}
     \begin{itemize}
         \item \textbf{Disparador:} Aprobación de la PR y fusión (\textit{merge}) en \texttt{main}.
         \item \textbf{Acciones Automáticas:} \textit{Build} de la aplicación y despliegue inmediato al entorno de \textit{Staging}.
         \item \textbf{Política:} Cada Historia de Usuario terminada debe estar disponible en \textit{Staging} lo antes posible para su validación por QA/PO durante el \textit{Sprint}.
     \end{itemize}
 
-    \item \textbf{Entrega a Producción - Cierre de Sprint}
+    \item \textbf{Entrega a Producción --- Cierre de Sprint}
     \begin{itemize}
         \item \textbf{Disparador:} Aprobación del incremento en la \textit{Sprint Review} (Martes) y coincidencia con plan de \textit{Release}.
         \item \textbf{Acciones:} Creación de \textit{Pull Request} de \texttt{main} hacia \texttt{prod}.
@@ -443,8 +435,7 @@ Para mantener la fluidez del trabajo, se establecen los siguientes mecanismos de
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{contenido/imagenes/figura9.png}
-    \caption{Flujo completo de tarjetas en Jira.}
-    \label{fig:flujo-colaboracion}
+    \caption{Flujo completo de tarjetas en Jira.}\label{fig:flujo-colaboracion}
 \end{figure}
 
 \textbf{Canales de Comunicación}
@@ -517,8 +508,7 @@ Será un gráfico que muestre día a día cuánto trabajo quedará por completar
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{contenido/imagenes/figura10.jpg}
-    \caption{Ejemplo de \textit{Burn-down chart}.}
-    \label{fig:burndown-chart}
+    \caption{Ejemplo de \textit{Burn-down chart}.}\label{fig:burndown-chart}
 \end{figure}
 
 \begin{itemize}
@@ -596,8 +586,7 @@ Tras la comparativa, se ha decidido utilizar \textbf{Jira} como herramienta prin
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{contenido/imagenes/figura11.png}
-    \caption{Tablero con diferentes Historias de Usuario}
-    \label{fig:tablero-jira}
+    \caption{Tablero con diferentes Historias de Usuario}\label{fig:tablero-jira}
 \end{figure}
 
 El tablero permitirá visualizar el \textit{Sprint} actual y el estado de cada historia.
@@ -605,17 +594,14 @@ El tablero permitirá visualizar el \textit{Sprint} actual y el estado de cada h
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{contenido/imagenes/figura12.png}
-    \caption{Backlog en Jira}
-    \label{fig:backlog-jira}
+    \caption{Backlog en Jira}\label{fig:backlog-jira}
 \end{figure}
 El \textit{backlog} contendrá las historias pendientes y permitirá iniciar o planificar nuevos \textit{Sprints}.
 
-% Figura 6
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{contenido/imagenes/figura13.png}
-    \caption{Ejemplo de Historia de Usuario en Jira}
-    \label{fig:hu-jira}
+    \caption{Ejemplo de Historia de Usuario en Jira}\label{fig:hu-jira}
 \end{figure}
 Se documentará cada historia incluyendo descripción, prioridad, responsable y criterios de aceptación.
 
@@ -636,8 +622,8 @@ Permitirá al equipo y al Product Owner tener una visión completa y transparent
     \item \textbf{Avances de cada Sprint}
     \begin{itemize}
         \item Historias de Usuario completadas.
-        \item Comparación de objetivos planeados vs. resultados.
-        \item \textit{Story Points} completados vs. planificados (\textit{Velocity}).
+        \item Comparación de objetivos planeados vs.\ resultados.
+        \item \textit{Story Points} completados vs.\ planificados (\textit{Velocity}).
         \item Tareas que pasan a futuros \textit{Sprints}.
     \end{itemize}
     
